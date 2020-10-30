@@ -18,7 +18,8 @@ def predict():
  
         input_name = request.form['input_name']
         data=input_name
-        reason_dict = enchant.PyPWL('test.txt')
+        ss='test.txt'
+        reason_dict = enchant.PyPWL(ss)
         word_exists = reason_dict.check(data)
         if not word_exists:
     #get suggestions for the input word if the word doesn't exist in the dictionary
